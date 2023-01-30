@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<head>
+    <title>Dong Liang - Personal Website</title>
+    <link rel="icon" href="Image/goku1.png">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap" rel="stylesheet">
+</head>
+<body onload = "onload()">
+
+    <!--Header Start-->
+    <header id="header">
+        <div id="left-header">
+            Dong Liang
+        </div>
+        <div id="middle-header">
+            <div class="middle-header-text" onclick="aboutMe()">
+                About Me &#9660;
+            </div>
+            <div class="middle-header-text" onclick="project()">
+                Projects
+            </div>
+            <div class="middle-header-text" onclick="scrollToSection('icons')">
+                Contact Me &#9660;
+            </div>
+        </div>
+        <div id="right-header" onclick = "rightHeaderClick()">
+            Click Me!
+        </div>
+    </header>
+    <!--Header End-->
+
+    <!--About Me Start-->
+    <div id = "main-content">
+        <div id = "page1">
+            <div class = "note-container">
+                <div class = "note">Welcome!
+                </div>
+                <div class = "note-bar" onclick = "notebar()">></div>
+            </div>
+            <div class = "body-1">
+                <div id = "body-1-1">
+                    <div id = "body-1-1-1">
+                        Prospective Web & Game Developer
+                    </div>
+                    <div id = "body-1-1-2">
+                        ________________________
+                    </div>
+                    <div id = "body-1-1-3">
+                        Current Undergrad Student In <br>Stony Brook University
+                    </div>
+                </div>
+                <div id = "body-1-2">
+                    <img src = "Image/pfp.jpg" class = "pfp">
+                </div>
+                <div id = "body-1-3">
+                    👋Hi There!👋 I'm Dong. <br>
+                    I am passionate about creating innovative, practical, 
+                    and aesthetically pleasing websites and games. 
+                </div>
+            </div>
+
+            <div id = "body-2">
+                
+                <div id = "body-2-1">
+                    Education & Experience
+                </div>
+                <div id = "body-2-2">
+                    <div id = "body-2-2-1">
+                        2022-2025 (EXPECTED)
+                    </div>
+                    <div id = "body-2-2-2">
+                        Bachelor in Computer Science
+                    </div>
+                    <div id = "body-2-2-3">
+                        STONY BROOK UNIVERSITY
+                    </div>
+                </div>
+                <div id = "body-2-3">
+                    <div id = "body-2-3-1">
+                        2022
+                    </div>
+                    <div id = "body-2-3-2">
+                        Mail Clerk - Member Service Department
+                    </div>
+                    <div id = "body-2-3-3">
+                        ELDERPLAN
+                    </div>
+                </div>
+                <div id = "body-2-4">
+                    <div id = "body-2-4-1">
+                        2021
+                    </div>
+                    <div id = "body-2-4-2">
+                        Camp Counselor
+                    </div>
+                    <div id = "body-2-4-3">
+                        BROOKLYN CHINESE-AMERICAN ASSOCIATION (BCA)
+                    </div>
+                </div>
+                <div id = "body-2-5">
+                    <div id = "body-2-5-1">
+                        2018-2022
+                    </div>
+                    <div id = "body-2-5-2">
+                        Computer Science Major Diploma 
+                    </div>
+                    <div id = "body-2-5-3">
+                        BROOKLYN TECHNICAL HIGHSCHOOL
+                    </div>
+                </div>
+            </div>
+
+            <div class = "award-timeline">
+                <div class = "timeline-title">
+                    Accomplishment
+                </div>
+                <div class = "awards">
+                    <div class = "award-1">
+                        <div class = "award-1-1">
+                            2021 QuestBridge College Prep Scholar
+                            <div class = "question-mark" onmouseover = "hoverInfo(1,true)" onmouseout = "hoverInfo(1,false);" 
+                            ondblclick="window.open('https://www.questbridge.org/high-school-students/college-prep-scholars', '_blank')">?</div>
+                        </div>
+                    </div>
+                    <div class = "award-1-info">The College Prep Scholars Program is an award
+                        that equips high-achieving, low-income high school juniors with the knowledge,
+                        resources, and confidence to apply to top colleges. More info can be found by <strong>double clicking</strong>.
+                    </div>
+                    <svg><line x1="-10" y1="230" x2="260" y2="140" stroke="black" stroke-width="10px"></svg>
+                    <div class = "award-2">
+                        <div class = "award-2-1">
+                            2021 QuestBridge Finalist 
+                            <div class = "question-mark" onmouseover = "hoverInfo(2,true)" onmouseout = "hoverInfo(2,false);" 
+                            ondblclick="window.open('https://www.questbridge.org/high-school-students/national-college-match', '_blank')">?</div>
+                        </div>
+                    </div>
+                    <div class = "award-2-info">The QuestBridge Regular Decision award is a program 
+                        that offers high-achieving, low-income high school juniors the opportunity 
+                        to apply to top colleges with no application fees and the chance to be 
+                        considered for a full four-year scholarship through the National College Match. 
+                        More info can be found by <strong>double clicking</strong>.
+                </div>
+                    <svg><line x1="-10" y2="230" x2="260" y1="140" stroke="black" stroke-width="10px"></svg>
+                    <div class = "award-3">
+                        <div class = "award-3-1">
+                            2022 National Cyber Scholar
+                            <div class = "question-mark" onmouseover = "hoverInfo(3,true)" onmouseout = "hoverInfo(3,false);" 
+                            ondblclick="window.open('https://www.nationalcyberscholarship.org/winners-2022', '_blank')">?</div>
+                        </div>
+                    </div>
+                    <div class = "award-3-info">A scholar is a student who meets the eligibility 
+                        criteria for a scholarship and has achieved a high score in the Cyber 
+                        Foundations Academy and GFACT certification exam. They are also awarded 
+                        the $500 Alan Paller Honor Scholarship.
+                        More info can be found by <strong>double clicking</strong>.
+                </div>
+                </div>
+            </div>
+        </div>
+        <!--About Me End-->
+
+
+        <!--Project Page Start-->
+        <div id = "page2">
+            <div id = "page2-title">
+                My Projects
+            </div>
+
+            <!--Project 1-->
+            <div id = "page2-project">
+                <div class = "projects">
+                    <div class = "project-image">
+                        <div class = "project-image-frame">
+                            <img src = "Image/website.png">
+                        </div>
+                    </div>
+                    <div class = "project-description">
+                        <div class = "project-title">
+                            Personal Website
+                        </div>
+                        <div class = "project-detail">
+                            <div class = "project-detail-description">
+                                <strong>Overview: </strong> This project is a personal website created with HTML, CSS, 
+                                and JavaScript to showcase my skills, experiences, and 
+                                personality. The website includes information about my 
+                                background, education, work experience, and personal interests. 
+                                It also serves as an online portfolio, featuring examples 
+                                of my projects and creative work. The website is designed 
+                                to be clean, modern, and easy to navigate, with a focus on 
+                                highlighting my strengths and making a positive first 
+                                impression on potential employers and clients.
+                                <br>
+                                <br>
+                                <strong>Next Steps: </strong> Implementing responsive web design.
+                            </div>
+                            <div class = "project-publication">
+                                <strong>Last published: </strong> January 29, 2023
+                                <br><br>This project can be found <span class = "redirect-link" onclick = "aboutMe()">here</span>.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Project 2-->
+            <div id = "page2-project">
+                <div class = "projects">
+                    <div class = "project-image">
+                        <div class = "project-image-frame">
+                            <img src = "Image/BlackJack.png">
+                        </div>
+                    </div>
+                    <div class = "project-description">
+                        <div class = "project-title">
+                            Black Jack Prodigy
+                        </div>
+                        <div class = "project-detail">
+                            <div class = "project-detail-description">
+                                <strong>Overview: </strong> "Black Jack Prodigy" is a simulation game that tests 
+                                player's skills in making strategic decisions and probability while playing Black 
+                                Jack in Resort World casino in Queens. The game is developed using HTML, CSS, 
+                                and JavaScript and is suitable for players of all skill levels. The expected 
+                                outcome is an engaging and entertaining Black Jack game that improves player's skills.
+                                <br>
+                                <br>
+                                <strong>Next Steps: </strong> Implementing responsive web design, animations and 
+                                better user-client interaction
+                            </div>
+                            <div class = "project-publication">
+                                <strong>Last published: </strong> January 2022
+                                <br><br>This project can be found <span class = "redirect-link" 
+                                onclick = "window.open('https://Project-6.dongliang.repl.co', '_blank')">here</span>.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Project 3-->
+            <div id = "page2-project">
+                <div class = "projects">
+                    <div class = "project-image">
+                        <div class = "project-image-frame">
+                            <img src = "Image/picturePuzzle.png">
+                        </div>
+                    </div>
+                    <div class = "project-description">
+                        <div class = "project-title">
+                            Picture Puzzle
+                        </div>
+                        <div class = "project-detail">
+                            <div class = "project-detail-description">
+                                <strong>Overview: </strong> "Picture Puzzle" is a simple game made with HTML, 
+                                CSS, and JavaScript where players rearrange images to their original form. 
+                                Players select from a set of available images and must restore them as quickly 
+                                and efficiently as possible. The game offers a challenging and entertaining 
+                                experience for puzzle enthusiasts who want to test their cognitive skills.
+                                <br>
+                                <br>
+                                <strong>Next Steps: </strong> Making a more friendly user-client interaction and animations.
+                            </div>
+                            <div class = "project-publication">
+                                <strong>Last published: </strong> December 2021
+                                <br><br>This project can be found <span class = "redirect-link" 
+                                onclick = "window.open('https://level-4-picture-puzzle.dongliang.repl.co', '_blank')">here</span>.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Project 4-->
+            <div id = "page2-project">
+                <div class = "projects">
+                    <div class = "project-image">
+                        <div class = "project-image-frame">
+                            <img src = "Image/fighter.png">
+                        </div>
+                    </div>
+                    <div class = "project-description">
+                        <div class = "project-title">
+                            One on One Fighter
+                        </div>
+                        <div class = "project-detail">
+                            <div class = "project-detail-description">
+                                <strong>Overview: </strong> "One on One Fighter" is a single-player combat game 
+                                made with HTML, CSS, and JavaScript. The player takes on the computer in a series 
+                                of rounds and must make strategic decisions to attack, defend, or attempt a 
+                                finishing move based on the current state of the fight and their fighter's stats. 
+                                The goal is to defeat the opponent and become the last fighter standing. This game 
+                                offers an immersive and thrilling experience for players who enjoy fighting games 
+                                and want to test their combat strategies and skills.
+                                <br>
+                                <br>
+                                <strong>Next Steps: </strong> Improving user interface and adding animations for 
+                                an enhanced player experience.
+                            </div>
+                            <div class = "project-publication">
+                                <strong>Last published: </strong> November 2021
+                                <br><br>This project can be found <span class = "redirect-link" 
+                                onclick = "window.open('https://one-on-one-fighter-lv3.dongliang.repl.co/', '_blank')">here</span>.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <!--Project Page End-->
+
+        <!--Footer Start-->
+        <div id = "footer">
+            <div id = "footer-upper">
+                <div id = "footer-text">
+                    Coded and designed by Dong Liang.
+                </div>
+                <div id = "icons">
+                    <img id = "facebook" src = "Image/facebook.png"
+                    onclick = "window.open('https://www.facebook.com/profile.php?id=100008342649438', '_blank')">
+                    <img id = "instagram" src = "Image/instagram.png"
+                    onclick = "window.open('https://www.instagram.com/dongliang0310/', '_blank')">
+                    <img id = "linkedIn" src = "Image/linkedIn.png"
+                    onclick = "window.open('https://www.linkedin.com/in/dongliang13/', '_blank')">
+                </div>
+            </div>
+            <div id = "footer-lower">
+                &#169;2023 Dong Liang. All Rights Reserved.
+            </div>
+        </div>
+        <!--Footer End-->
+
+    </div>
+</body>
