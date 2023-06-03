@@ -1,3 +1,9 @@
-tab(0);
+let page = 0;
 
-page = 0;
+function lightMode(){
+    
+}
+
+function darkMode(){
+    
+}

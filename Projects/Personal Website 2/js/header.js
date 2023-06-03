@@ -1,5 +1,3 @@
-let page;
-
 //all pages linking to this js page must have ID "header" for the next line to work
 document.querySelector("#header").innerHTML = `
     <div id="light-tone-container">
@@ -59,10 +57,10 @@ function tab(tabNumber){
     });
 }
 
+tab[page];
+
 document.querySelectorAll(".tab").forEach( (value,index) => {
     value.addEventListener("click", () => {
         tab(index);
     } );
 });
-
-
