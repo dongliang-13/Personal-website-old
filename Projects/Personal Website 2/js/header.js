@@ -13,36 +13,50 @@ document.querySelector("#header").innerHTML = `
 
 feather.replace();
 
-let brightMode = 1;
+let brightMode = Number(localStorage.getItem("brightMode"));
+
 const toneContainer = document.querySelector("#light-tone-container");
 const lightButton = document.querySelector("#light");
 const darkButton = document.querySelector("#dark");
 
+function headerLightMode(){
+    brightMode = 1;
+    localStorage.setItem("brightMode","1");
+    lightButton.style.backgroundColor = "white";
+    lightButton.style.color = "black";
+    darkButton.style.backgroundColor = "#E8E8E8";
+    darkButton.style.color = "white";
+    toneContainer.style.backgroundColor = "#E8E8E8";
+    lightMode();
+}
+
+function headerDarkMode(){
+    brightMode = 0;
+    localStorage.setItem("brightMode","0");
+    lightButton.style.backgroundColor = "white";
+    lightButton.style.color = "#E8E8E8";
+    darkButton.style.backgroundColor = "#E8E8E8";
+    darkButton.style.color = "black";
+    toneContainer.style.backgroundColor = "white";
+    darkMode();
+}
+
+if(!brightMode){
+    headerDarkMode();
+}
+
 lightButton.addEventListener( "click", () => {
     if(!brightMode)
     {
-        brightMode = 1;
-        lightButton.style.backgroundColor = "white";
-        lightButton.style.color = "black";
-        darkButton.style.backgroundColor = "#E8E8E8";
-        darkButton.style.color = "white";
-        toneContainer.style.backgroundColor = "#E8E8E8";
-        document.body.style.backgroundColor = "white";
-        document.body.style.color = "black";
+        headerLightMode();
     }
 });
+
 
 darkButton.addEventListener( "click", () => {
     if(brightMode)
     {
-        brightMode = 0;
-        lightButton.style.backgroundColor = "white";
-        lightButton.style.color = "#E8E8E8";
-        darkButton.style.backgroundColor = "#E8E8E8";
-        darkButton.style.color = "black";
-        toneContainer.style.backgroundColor = "white";
-        document.body.style.backgroundColor = "#1b1b1c";
-        document.body.style.color = "white";
+        headerDarkMode();
     }
 });
 
@@ -57,7 +71,7 @@ function tab(tabNumber){
     });
 }
 
-tab[page];
+tab(page);
 
 document.querySelectorAll(".tab").forEach( (value,index) => {
     value.addEventListener("click", () => {

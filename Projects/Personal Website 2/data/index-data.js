@@ -1,4 +1,4 @@
-let iconForScroll = [
+const iconForScroll = [
     "images/html.png",
     "images/js.png",
     "images/css.png",
@@ -9,15 +9,18 @@ let iconForScroll = [
     "images/asm.png"
 ];
 
-const scrolling = document.querySelector(".scrolling-slide");
-const scrollingContainer = document.querySelector(".scrolling-container");
+const highlightProjects = [
+    {
+        name: "project1",
+        description: "this is project1",
+        tags: ["JSON","HTML"],
+        image: "../images/test.jpeg"
+    },
+    {
+        name: "project1",
+        description: "this is project1",
+        tags: ["JSON","HTML"],
+        image: ""
+    }
+];
 
-let htmlForScroll = "";
-iconForScroll.forEach( (value) => {
-    htmlForScroll += `
-    <img src="${value}" width="150px"></i>
-    `
-});
-
-scrolling.innerHTML = htmlForScroll;
-scrollingContainer.innerHTML += scrollingContainer.innerHTML;
