@@ -1,0 +1,28 @@
+#topScroll{
+    position:fixed;
+    bottom: 15%;
+    right:5%;
+    z-index: 4;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.2s ease;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    cursor: pointer;
+    color:white;
+    opacity: var(--topScrollOpacity,0);
+    transition: opacity 1s ease;
+    visibility:hidden;
+}
+
+#topScroll:hover{
+    opacity:1;
+    color:red;  
+}
+
+#arrow-up{
+    font-size:35px;
+    border-radius: 50%;
+}

@@ -1,12 +1,14 @@
 let page = 0;
 const scrollingContainer = document.querySelector(".scrolling-container");
 
+let timeoutIndex = [];
 function lightMode(){
     scrollingContainer.style.setProperty('--opacity',0);
     document.body.style.backgroundColor = "white";
     document.body.style.color = "black";
     scrollingContainer.style.setProperty('--color','white');
-    setTimeout(()=>{scrollingContainer.style.setProperty('--opacity',1);},"1000");
+    timeoutIndex[0] ? clearInterval(timeoutIndex[0]) : pass;
+    timeoutIndex[0] = setTimeout(()=>{scrollingContainer.style.setProperty('--opacity',1);},"1000");
 }
 
 function darkMode(){
