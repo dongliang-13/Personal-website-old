@@ -20,7 +20,7 @@ const highlightProjects = [
         name: "project1",
         description: "this is project1",
         tags: ["JSON","HTML"],
-        image: ""
+        image: "../images/test.jpeg"
     }
 ];
 
