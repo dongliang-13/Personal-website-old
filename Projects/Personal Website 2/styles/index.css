@@ -48,7 +48,7 @@
 
 .scrolling-slide{
     display: inline-block;
-    animation: 15s scrolling infinite linear;
+    animation: 40s scrolling infinite linear;
 }
 
 .scrolling-container:hover .scrolling-slide{

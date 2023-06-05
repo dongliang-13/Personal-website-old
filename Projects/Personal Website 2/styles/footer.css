@@ -1,0 +1,28 @@
+#footer{
+    display:flex;
+    flex-direction: column;
+    height:15vh;
+    background-color: greenyellow;
+    align-items: stretch;
+    margin-top:100px;
+}
+
+.footer-top{
+    height:5px;
+    background-color: black;
+}
+
+.footer-bottom{
+    height:100%;
+    display:flex;
+}
+
+.footer-bottom-left{
+    display:flex;
+    align-items: flex-end;
+    background-color: yellow;
+}
+
+.footer-bottom-right{
+
+}
