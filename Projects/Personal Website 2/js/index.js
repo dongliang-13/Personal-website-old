@@ -7,8 +7,9 @@ function lightMode(){
     document.body.style.backgroundColor = "white";
     document.body.style.color = "black";
     scrollingContainer.style.setProperty('--color','white');
-    timeoutIndex[0] ? clearInterval(timeoutIndex[0]) : pass;
+    timeoutIndex[0] ? clearInterval(timeoutIndex[0]) : {};
     timeoutIndex[0] = setTimeout(()=>{scrollingContainer.style.setProperty('--opacity',1);},"1000");
+    lightModeTopScroll();
 }
 
 function darkMode(){
@@ -17,7 +18,9 @@ function darkMode(){
     document.body.style.color = "white";
     scrollingContainer.style.setProperty('--color','#1b1b1c');
     scrollingContainer.style.setProperty("--opacityTransition","opacity");
-    setTimeout(()=>{scrollingContainer.style.setProperty('--opacity',1);},"1000");
+    timeoutIndex[0] ? clearInterval(timeoutIndex[0]) : {};
+    timeoutIndex[0] = setTimeout(()=>{scrollingContainer.style.setProperty('--opacity',1);},"1000");
+    darkModeTopScroll();
 }
 
 const scrolling = document.querySelector(".scrolling-slide");

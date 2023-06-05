@@ -10,10 +10,12 @@ topScroll.addEventListener('mouseover', function() {
   
 topScroll.addEventListener('mouseout', function() {
     isMouseOverDiv = false;
+    scrollNow();
 });
 
 let interval = [];
-window.addEventListener('scroll', function() {
+
+function scrollNow(){
     if(interval[0]){
         clearInterval(interval[0]);
     }
@@ -21,31 +23,38 @@ window.addEventListener('scroll', function() {
         topScroll.style.setProperty("--topScrollOpacity","0");
         interval[0] = setTimeout(function()
         {
-            topScroll.style.visibility = "hidden";
-        } ,"1000");
+            topScroll.style.setProperty("--topScrollVisibility","hidden");
+        } ,"200");
     }
     else if ((window.innerHeight + window.pageYOffset) >= document.body.offsetHeight && !isMouseOverDiv) {
         topScroll.style.setProperty("--topScrollOpacity","1");
-        topScroll.style.visibility = "visible";
+        topScroll.style.setProperty("--topScrollVisibility","visible");
     }
     else if (!isMouseOverDiv)
     {
         topScroll.style.setProperty("--topScrollOpacity","0.3");
-        topScroll.style.visibility = "visible";
+        topScroll.style.setProperty("--topScrollVisibility","visible");
     }
+}
+
+window.addEventListener('scroll', function() {
+    scrollNow();
 });
 
 topScroll.addEventListener("click",function(){
-    window.scroll({
-        top: 0,
-        behavior: 'smooth'
-    });
-    topScroll.style.setProperty("--topScrollOpacity","0");
-    if(interval[0]){
-        clearInterval(interval[0]);
-    }
-    interval[0] = setTimeout(function()
-    {
-        topScroll.style.visibility = "hidden";
-    } ,"1000");
+    topScroll.style.setProperty("--topScrollVisibility","hidden");
+    setTimeout(function(){ 
+            window.scroll({
+            top: 0,
+            behavior: 'smooth'
+        });
+    },"200");
 });
+
+function lightModeTopScroll(){
+    topScroll.style.setProperty("--topScrollColor", "black");
+}
+
+function darkModeTopScroll(){
+    topScroll.style.setProperty("--topScrollColor", "white");
+}

@@ -11,18 +11,16 @@
     height: 60px;
     border-radius: 50%;
     cursor: pointer;
-    color:white;
+    color:var(--topScrollColor,white);
     opacity: var(--topScrollOpacity,0);
+    visibility: var(--topScrollVisibility,hidden);
     transition: opacity 1s ease;
-    visibility:hidden;
 }
 
 #topScroll:hover{
     opacity:1;
-    color:red;  
 }
 
 #arrow-up{
     font-size:35px;
-    border-radius: 50%;
 }
