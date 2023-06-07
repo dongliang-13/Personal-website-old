@@ -58,7 +58,7 @@ body{
     display:flex;
     justify-content: space-between;
     gap:20px;
-    margin-right: 150px;
+    margin-right: 10vw;
     overflow: hidden;
     height: var(--tab-container-height,auto);
     transition: height 1s ease;
