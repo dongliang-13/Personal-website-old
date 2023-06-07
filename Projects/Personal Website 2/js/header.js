@@ -1,14 +1,17 @@
 //all pages linking to this js page must have ID "header" for the next line to work
 document.querySelector("#header").innerHTML = `
-    <div id="light-tone-container">
-    <i data-feather="sun" id="light"></i>
-    <i data-feather="moon" id="dark"></i>
+    <div id="top-container">
+        <div id="menu-icon"><i data-feather="menu" id="menu-icon"></i></div>
+        <div id="light-tone-container">
+            <i data-feather="sun" id="light"></i>
+            <i data-feather="moon" id="dark"></i>
+        </div>
     </div>
     <div id="tab-container">
-    <div id = "home" class = "tab">Home</div>
-    <div id = "project" class = "tab">Project</div>
-    <div id = "about" class = "tab">About</div>
-    <div id = "resume" class = "tab">Resume</div>
+        <div id = "home" class = "tab">Home</div>
+        <div id = "project" class = "tab">Project</div>
+        <div id = "about" class = "tab">About</div>
+        <div id = "resume" class = "tab">Resume</div>
     </div>`;
 
 feather.replace();
@@ -78,3 +81,41 @@ document.querySelectorAll(".tab").forEach( (value,index) => {
         tab(index);
     } );
 });
+
+let menuClicked = false;
+document.querySelector("#menu-icon").addEventListener( "click", () => {
+    const tabContainer = document.getElementById("tab-container");
+    menuClicked = !menuClicked;
+    let temp;
+    menuClicked?temp="181.6px":temp="0"; 
+    //181.6 = 30.4 (height of letter) * 4 (row) + 20 (desired gap length) * 3 (spaces between 4 div)
+    tabContainer.style.setProperty("--tab-container-height",temp);
+});
+
+//screen size change
+function handleScreenSizeSmall() {
+    const menuIcon = document.getElementById('menu-icon');
+    menuIcon.style.setProperty("--menu-icon-visibility","visible");
+    const tabContainer = document.getElementById("tab-container");
+    tabContainer.style.setProperty("--tab-container-height","0");
+}
+  
+function handleScreenSizeBig() {
+    const menuIcon = document.getElementById('menu-icon');
+    menuIcon.style.setProperty("--menu-icon-visibility","hidden");
+    const tabContainer = document.getElementById("tab-container");
+    tabContainer.style.setProperty("--tab-container-height","auto");
+}
+
+function handleResize() {
+    const screenWidth = window.innerWidth
+    if (screenWidth <= 760) {
+        handleScreenSizeSmall();
+    } else {
+        handleScreenSizeBig();
+    }
+}
+  
+window.addEventListener('resize', handleResize);
+
+handleResize();
