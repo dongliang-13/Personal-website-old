@@ -108,7 +108,7 @@ function handleScreenSizeBig() {
 }
 
 function handleResize() {
-    const screenWidth = screen.width
+    const screenWidth = window.innerWidth;
     if (screenWidth <= 760) {
         handleScreenSizeSmall();
     } else {

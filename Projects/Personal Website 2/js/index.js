@@ -42,7 +42,7 @@ highlightProjects.forEach( (value) => {
     value.tags.forEach( (value) => {
         htmlForTag += `<span class = "projectEachTag">${value}</span>`;
     });
-    if(alternate){
+    if(alternate || screen.width <= 768){
         htmlForProject += `
         <div class = "project-inner-container">
             <div class="project-inner-left">
