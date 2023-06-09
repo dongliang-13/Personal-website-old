@@ -36,18 +36,46 @@ scrolling.innerHTML = htmlForScroll;
 scrollingContainer.innerHTML += scrollingContainer.innerHTML;
 
 let htmlForProject = "";
+let alternate = true;
 highlightProjects.forEach( (value) => {
     let htmlForTag="";
     value.tags.forEach( (value) => {
         htmlForTag += `<span class = "projectEachTag">${value}</span>`;
     });
-    htmlForProject += `
-    <span class = "highlight-projects" style = "background-image: url('${value.image}')">
-        <div class = "project-name">${value.name}</div>
-        <div class = "project-description">${value.description}</div>
-        <div class = "project-tags">${htmlForTag}</div>
-    </span>
+    if(alternate){
+        htmlForProject += `
+        <div class = "project-inner-container">
+            <div class="project-inner-left">
+                <img src="images/test.jpeg">
+            </div>
+            <div class="project-inner-right">
+                <div class = "project-inner-right-name">${value.name}</div>
+                <div class = "project-inner-right-tags">${htmlForTag}</div>
+                <div class = "project-inner-right-description">${value.description}</div>
+                <div class = "project-inner-right-availableText">${value.availableText}</div>
+            </div>
+        </div>
     `;
+    alternate = !alternate;
+    }
+    else
+    {
+        htmlForProject += `
+        <div class = "project-inner-container">
+            <div class="project-inner-right">
+                <div class = "project-inner-right-name">${value.name}</div>
+                <div class = "project-inner-right-tags">${htmlForTag}</div>
+                <div class = "project-inner-right-description">${value.description}</div>
+                <div class = "project-inner-right-availableText">${value.availableText}</div>
+            </div>
+            <div class="project-inner-left">
+                <img src="images/test.jpeg">
+            </div>
+        </div>
+    `;
+    alternate = !alternate;
+    }
+
 });
 
 document.querySelector(".projects-container").innerHTML = htmlForProject;
