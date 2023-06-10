@@ -45,10 +45,10 @@ highlightProjects.forEach( (value) => {
     if(alternate || window.innerWidth <= 768){
         htmlForProject += `
         <div class = "project-inner-container">
-            <div class="project-inner-left">
+            <div class="project-inner-left" data-aos="fade-right" data-aos-easing="ease-in">
                 <img src="images/test.jpeg">
             </div>
-            <div class="project-inner-right">
+            <div class="project-inner-right" data-aos="fade-left" data-aos-easing="ease-in">
                 <div class = "project-inner-right-name">${value.name}</div>
                 <div class = "project-inner-right-tags">${htmlForTag}</div>
                 <div class = "project-inner-right-description">${value.description}</div>
@@ -62,13 +62,13 @@ highlightProjects.forEach( (value) => {
     {
         htmlForProject += `
         <div class = "project-inner-container">
-            <div class="project-inner-right">
+            <div class="project-inner-right" data-aos="fade-right" data-aos-easing="ease-in">
                 <div class = "project-inner-right-name">${value.name}</div>
                 <div class = "project-inner-right-tags">${htmlForTag}</div>
                 <div class = "project-inner-right-description">${value.description}</div>
                 <div class = "project-inner-right-availableText">${value.availableText}</div>
             </div>
-            <div class="project-inner-left">
+            <div class="project-inner-left" data-aos="fade-left" data-aos-easing="ease-in">
                 <img src="images/test.jpeg">
             </div>
         </div>

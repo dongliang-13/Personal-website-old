@@ -1,17 +1,17 @@
 //all pages linking to this js page must have ID "header" for the next line to work
 document.querySelector("#header").innerHTML = `
     <div id="top-container">
-        <div id="menu-icon"><i data-feather="menu" id="menu-icon"></i></div>
-        <div id="light-tone-container">
+        <div id="menu-icon" data-aos="fade-down" data-aos-duration="1000"><i data-feather="menu" id="menu-icon"></i></div>
+        <div id="light-tone-container" data-aos="fade-down" data-aos-duration="1000">
             <i data-feather="sun" id="light"></i>
             <i data-feather="moon" id="dark"></i>
         </div>
     </div>
     <div id="tab-container">
-        <div id = "home" class = "tab">Home</div>
-        <div id = "project" class = "tab">Project</div>
-        <div id = "about" class = "tab">About</div>
-        <div id = "resume" class = "tab">Resume</div>
+        <div id = "home" class = "tab" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">Home</div>
+        <div id = "project" class = "tab" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">Project</div>
+        <div id = "about" class = "tab" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">About</div>
+        <div id = "resume" class = "tab" data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000">Resume</div>
     </div>`;
 
 feather.replace();

@@ -28,18 +28,26 @@
 
         <div class="main">
             <div class="intro">
-                <div id="intro-line-1" class = "intro-text">Hello👋, it's me</div>
-                <div id="intro-line-2" class = "intro-text">Dong Liang<span style="color:#155AE0">.</span></div>
-                <div id="intro-line-3" class = "intro-text" >an aspiring software engineer.</div>
+                <div id="intro-line-1" class = "intro-text" data-aos="zoom-in-left" data-aos-delay="1000">
+                    Hello👋, it's me
+                </div>
+                <div id="intro-line-2" class = "intro-text" data-aos="slide-right" data-aos-delay="1000">
+                    Dong Liang<span style="color:#155AE0">.</span>
+                </div>
+                <div id="intro-line-3" class = "intro-text" data-aos="fade-up" data-aos-delay="1000">
+                    an aspiring software engineer.
+                </div>
             </div>
 
-            <div class = "scrolling-container">
+            <div class = "scrolling-container" data-aos="fade-up" data-aos-delay="1000">
                 <div class = "scrolling-slide"></div>
             </div>
         </div>
 
         <div class = "project-container">
-            <div class = "project-top-label">Recent Projects<span style="color:#155AE0"> +</span></div>
+            <div class = "project-top-label" data-aos="fade">
+                Recent Projects<span style="color:#155AE0"> +</span>
+            </div>
             <div class = "projects-container">
             </div>
         </div>
@@ -56,5 +64,12 @@
         <script src="js/index.js"></script>
         <script src="js/header.js"></script>
         <script src="data/footer-data.js"></script>
+
+        <!--aos.js-->
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+          AOS.init();
+        </script>
+        <!--/aos.js-->
     </body>
 </html>
