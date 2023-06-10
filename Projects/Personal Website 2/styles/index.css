@@ -6,6 +6,14 @@ body{
     overflow-x: hidden;
 }
 
+.main{
+    height:95vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    flex:1 1 0;
+}
+
 .intro-text{
     padding-left: 10vw;
     font-family: 'Allerta', sans-serif;
@@ -39,7 +47,7 @@ body{
 
 .scrolling-container{
     display:flex;
-    margin: 80px 0;
+    padding: 80px 0;
     align-items: center;
     overflow-x: hidden;
     position:relative;
@@ -77,6 +85,7 @@ body{
 
 .scrolling-container img{
     margin:0 30px;
+    overflow:visible;
 }
 
 .project-top-label{
@@ -152,11 +161,41 @@ body{
     font-weight:600;
     cursor: pointer;
     transition: transform 0.5s, color 0.5s;
+    display:flex;
+    width:auto;
 }
 
 .project-inner-right-availableText:hover{
     transform: translateX(0.5vw);
     color:#a3ccce;
+}
+
+@media only screen and (max-width: 1300px){
+    .projects-container{
+        padding-bottom: 20vh;
+    }
+
+    .project-inner-container{
+        flex-direction: column;
+        padding-bottom: 20px;
+    }
+
+    .project-inner-left{
+        width:100vw;
+    }
+
+    .project-inner-left img{
+        width:80vw;
+        height:45vw;
+    }
+
+    .project-inner-right{
+        flex-direction: column;
+        justify-content: center;
+        gap:16px;
+        width:100vw;
+        padding-top:30px;
+    }
 }
 
 /* multiplier 0.8 from previous bigger width */
@@ -171,14 +210,6 @@ body{
     
     #intro-line-3{
         font-size: 20px;
-    }
-
-    .scrolling-container{
-        margin: 64px 0;
-    }
-
-    .scrolling-container img{
-        width:120px;
     }
 
     .project-top-label{
@@ -225,7 +256,6 @@ body{
     }
     
     .projectEachTag{
-        background-color: blue;
         padding: 4px 8px 4px 8px;
         border-radius: 4px;
         font-size: 12.8px;
@@ -238,29 +268,9 @@ body{
 
 /* multiplier 0.87 from previous bigger width */
 @media only screen and (max-width: 650px){
-    #intro-line-1{
-        font-size: 35px;
-    }
-    
-    #intro-line-2{
-        font-size: 56px;
-    }
-    
-    #intro-line-3{
-        padding-top: 15px;
-        font-size: 17.5px;
-    }
-
-    .scrolling-container{
-        margin: 55.68px 0;
-    }
-
     .scrolling-container img{
-        width:104.4px;
-    }
-
-    .scrolling-slide{
-        animation: 38s scrolling infinite linear;
+        margin:0 20px;
+        width:100px;
     }
 
     .project-top-label{
@@ -307,33 +317,26 @@ body{
 /* multiplier 0.71 from previous bigger width */
 @media only screen and (max-width: 500px){
     #intro-line-1{
-        font-size: 25px;
+        font-size: 30px;
     }
     
     #intro-line-2{
-        font-size: 40px;
+        font-size: 50px;
     }
     
     #intro-line-3{
-        font-size: 12.5px;
-    }
-
-    .scrolling-container{
-        margin: 39.53px 0;
-    }
+        padding-top: 15px;
+        font-size: 15px;
+    } 
 
     .scrolling-container img{
-        width:74.124px;
-    }
-
-    .scrolling-slide{
-        animation: 35s scrolling infinite linear;
+        margin:0 20px;
+        width:100px;
     }
 
     .project-top-label{
         font-size: 25px;
     }
-
     
     .projects-container{
         padding-bottom: 12.354vh;

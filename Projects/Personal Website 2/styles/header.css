@@ -62,7 +62,6 @@ body{
     overflow: hidden;
     height: var(--tab-container-height,auto);
     transition: height 1s ease;
-    padding-bottom: 5px;
 }
 
 .tab{
@@ -70,6 +69,7 @@ body{
     font-size: 25px;
     cursor: pointer;
     text-align: center;
+    padding-bottom: 5px;
 }
 
 .underline{

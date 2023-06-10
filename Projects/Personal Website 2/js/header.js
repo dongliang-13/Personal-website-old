@@ -87,8 +87,9 @@ document.querySelector("#menu-icon").addEventListener( "click", () => {
     const tabContainer = document.getElementById("tab-container");
     menuClicked = !menuClicked;
     let temp;
-    menuClicked?temp="181.6px":temp="0"; 
-    //181.6 = 30.4 (height of letter) * 4 (row) + 20 (desired gap length) * 3 (spaces between 4 div)
+    let canSee;
+    menuClicked?temp="174px":temp="0px"; 
+    //174 = 24 (height of letter) * 4 (row) + 20 (desired gap length) * 3 (spaces between 4 div) + 5 (padding-bottom) * 4 (words)
     tabContainer.style.setProperty("--tab-container-height",temp);
 });
 
