@@ -11,7 +11,7 @@ document.querySelector("#header").innerHTML = `
         <div id = "home" class = "tab" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">Home</div>
         <div id = "project" class = "tab" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">Project</div>
         <div id = "about" class = "tab" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">About</div>
-        <div id = "resume" class = "tab" data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000">Resume</div>
+        <div id = "resume" class = "tab" data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000">Contact</div>
     </div>`;
 
 feather.replace();
