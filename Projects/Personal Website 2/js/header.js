@@ -1,17 +1,17 @@
 //all pages linking to this js page must have ID "header" for the next line to work
 document.querySelector("#header").innerHTML = `
     <div id="top-container">
-        <div id="menu-icon" data-aos="fade-down" data-aos-duration="1000"><i data-feather="menu" id="menu-icon"></i></div>
-        <div id="light-tone-container" data-aos="fade-down" data-aos-duration="1000">
+        <div id="menu-icon"><i data-feather="menu" id="menu-icon"></i></div>
+        <div id="light-tone-container">
             <i data-feather="sun" id="light"></i>
             <i data-feather="moon" id="dark"></i>
         </div>
     </div>
     <div id="tab-container">
-        <div id = "home" class = "tab" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">Home</div>
-        <div id = "project" class = "tab" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">Project</div>
-        <div id = "about" class = "tab" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">About</div>
-        <div id = "resume" class = "tab" data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000">Contact</div>
+        <div id = "home" class = "tab">Home</div>
+        <div id = "project" class = "tab">Project</div>
+        <div id = "about" class = "tab">About</div>
+        <div id = "resume" class = "tab">Contact</div>
     </div>`;
 
 feather.replace();
@@ -70,7 +70,14 @@ function tab(tabNumber){
     tab.push(document.querySelector("#about"));
     tab.push(document.querySelector("#resume"));
     tab.forEach( (value,index) => {
-        tabNumber==index?tab[index].classList.add("underline"):tab[index].classList.remove("underline");
+        if(tabNumber==index)
+        {
+            tab[index].classList.add("underline");
+        }
+        else
+        {
+            tab[index].classList.remove("underline");
+        }
     });
 }
 
@@ -79,6 +86,24 @@ tab(page);
 document.querySelectorAll(".tab").forEach( (value,index) => {
     value.addEventListener("click", () => {
         tab(index);
+        if(index!=page)
+        {
+            if(index==0){
+                window.location.href = "index.html";
+            }
+            else if(index==1)
+            {
+                window.location.href = "project.html";
+            }
+            else if(index==2)
+            {
+                window.location.href = "about.html";
+            }
+            else
+            {
+                window.location.href = "contact.html";
+            }
+        }
     } );
 });
 

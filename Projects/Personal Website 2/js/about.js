@@ -1,6 +1,5 @@
 let page = 2;
 
-let timeoutIndex = [];
 function lightMode(){
     document.body.style.backgroundColor = "white";
     document.body.style.color = "black";
