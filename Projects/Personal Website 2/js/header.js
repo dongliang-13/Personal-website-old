@@ -1,20 +1,20 @@
 //all pages linking to this js page must have ID "header" for the next line to work
 document.querySelector("#header").innerHTML = `
     <div id="top-container">
-        <div id="menu-icon"><i data-feather="menu" id="menu-icon"></i></div>
+        <div id="menu-icon"><i data-feather="menu"></i></div>
         <div id="light-tone-container">
             <i data-feather="sun" id="light"></i>
             <i data-feather="moon" id="dark"></i>
         </div>
     </div>
-    <div id="tab-container">
-        <div id = "home" class = "tab">Home</div>
-        <div id = "project" class = "tab">Project</div>
-        <div id = "about" class = "tab">About</div>
-        <div id = "resume" class = "tab">Contact</div>
-    </div>`;
+    <ul id="tab-container">
+        <li id = "home" class = "tab"><a href="index.html">Home</a></li>
+        <li id = "project" class = "tab"><a href="project.html">Project</a></li>
+        <li id = "about" class = "tab"><a href="about.html">About</a></li>
+        <li id = "resume" class = "tab"><a href="contact.html">Contact</a></li>
+    </ul>`;
 
-feather.replace();
+feather.replace();  
 
 let brightMode = Number(localStorage.getItem("brightMode"));
 
@@ -82,30 +82,6 @@ function tab(tabNumber){
 }
 
 tab(page);
-
-document.querySelectorAll(".tab").forEach( (value,index) => {
-    value.addEventListener("click", () => {
-        tab(index);
-        if(index!=page)
-        {
-            if(index==0){
-                window.location.href = "index.html";
-            }
-            else if(index==1)
-            {
-                window.location.href = "project.html";
-            }
-            else if(index==2)
-            {
-                window.location.href = "about.html";
-            }
-            else
-            {
-                window.location.href = "contact.html";
-            }
-        }
-    } );
-});
 
 let menuClicked = false;
 document.querySelector("#menu-icon").addEventListener( "click", () => {

@@ -6,6 +6,7 @@
         <link rel="stylesheet" href="styles/header.css">
         <link rel="stylesheet" href="styles/footer.css">
         <link rel="stylesheet" href="styles/topScroll.css">
+        <link rel="stylesheet" href="styles/transition.css">
         <!--/CSS links-->
 
         <!--External CSS link-->
@@ -24,22 +25,23 @@
         <title>Dong Liang</title>
     </header>
     <body>
-        <nav id="header"></nav>
+        <div class="transition transition-5 is-active"></div>
 
+        <nav id="header"></nav>
         <div class="main">
             <div class="intro">
-                <div id="intro-line-1" class = "intro-text" data-aos="zoom-in-left" data-aos-delay="500">
+                <div id="intro-line-1" class = "intro-text" data-aos="zoom-in-left" data-aos-delay="1000">
                     Hello👋, it's me
                 </div>
-                <div id="intro-line-2" class = "intro-text" data-aos="slide-right" data-aos-delay="500">
+                <div id="intro-line-2" class = "intro-text" data-aos="slide-right" data-aos-delay="1000">
                     Dong Liang<span style="color:#155AE0">.</span>
                 </div>
-                <div id="intro-line-3" class = "intro-text" data-aos="fade-up" data-aos-delay="500">
+                <div id="intro-line-3" class = "intro-text" data-aos="fade-up" data-aos-delay="1000">
                     an aspiring software engineer.
                 </div>
             </div>
 
-            <div class = "scrolling-container" data-aos="fade-up" data-aos-delay="500">
+            <div class = "scrolling-container" data-aos="fade-up" data-aos-delay="1000">
                 <div class = "scrolling-slide"></div>
             </div>
         </div>
@@ -59,6 +61,7 @@
         <script src="https://kit.fontawesome.com/44e15d51c6.js" crossorigin="anonymous"></script>
         <!--/External js frame links-->
         <!--JS links-->
+        <script src="js/transition.js"></script>
         <script src="data/index-data.js"></script>
         <script src="js/topScroll.js"></script>
         <script src="js/index.js"></script>
