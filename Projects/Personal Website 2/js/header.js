@@ -9,9 +9,8 @@ document.querySelector("#header").innerHTML = `
     </div>
     <ul id="tab-container">
         <li id = "home" class = "tab"><a href="index.html">Home</a></li>
-        <li id = "project" class = "tab"><a href="project.html">Project</a></li>
         <li id = "about" class = "tab"><a href="about.html">About</a></li>
-        <li id = "resume" class = "tab"><a href="contact.html">Contact</a></li>
+        <li id = "resume" class = "tab"><a href="feedback.html">Feedback</a></li>
     </ul>`;
 
 feather.replace();  
@@ -66,7 +65,6 @@ darkButton.addEventListener( "click", () => {
 function tab(tabNumber){
     let tab = [];
     tab.push(document.querySelector("#home"));
-    tab.push(document.querySelector("#project"));
     tab.push(document.querySelector("#about"));
     tab.push(document.querySelector("#resume"));
     tab.forEach( (value,index) => {
@@ -89,8 +87,8 @@ document.querySelector("#menu-icon").addEventListener( "click", () => {
     menuClicked = !menuClicked;
     let temp;
     let canSee;
-    menuClicked?temp="174px":temp="0px"; 
-    //174 = 24 (height of letter) * 4 (row) + 20 (desired gap length) * 3 (spaces between 4 div) + 5 (padding-bottom) * 4 (words)
+    menuClicked?temp="127px":temp="0px"; 
+    //127 = 24 (height of letter) * 3 (row) + 20 (desired gap length) * 2 (spaces between 3 div) + 5 (padding-bottom) * 3 (words)
     tabContainer.style.setProperty("--tab-container-height",temp);
 });
 

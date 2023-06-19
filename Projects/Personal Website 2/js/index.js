@@ -36,44 +36,24 @@ scrolling.innerHTML = htmlForScroll;
 scrollingContainer.innerHTML += scrollingContainer.innerHTML;
 
 let htmlForProject = "";
-let alternate = true;
-highlightProjects.forEach( (value) => {
+highlightProjects.forEach( (value,index) => {
     let htmlForTag="";
     value.tags.forEach( (value) => {
         htmlForTag += `<span class = "projectEachTag">${value}</span>`;
     });
-    if(alternate || window.innerWidth <= 768){
-        htmlForProject += `
-        <div class = "project-inner-container">
-            <div class="project-inner-left" data-aos="fade-right" data-aos-easing="ease-in">
-                <img src="images/test.jpeg">
-            </div>
-            <div class="project-inner-right" data-aos="fade-left" data-aos-easing="ease-in">
-                <div class = "project-inner-right-name">${value.name}</div>
-                <div class = "project-inner-right-tags">${htmlForTag}</div>
-                <div class = "project-inner-right-description">${value.description}</div>
-                <div class = "project-inner-right-availableText">${value.availableText}</div>
-            </div>
+    //if(alternate || window.innerWidth <= 768)
+    htmlForProject += `
+    <div class = "project-inner-container">
+        <div class="project-inner-left left-${index}" data-aos="fade-right" data-aos-easing="ease-in">
+            <img src="images/test.jpeg">
         </div>
-    `;
-    alternate = !alternate;
-    }
-    else
-    {
-        htmlForProject += `
-        <div class = "project-inner-container">
-            <div class="project-inner-right" data-aos="fade-right" data-aos-easing="ease-in">
-                <div class = "project-inner-right-name">${value.name}</div>
-                <div class = "project-inner-right-tags">${htmlForTag}</div>
-                <div class = "project-inner-right-description">${value.description}</div>
-                <div class = "project-inner-right-availableText">${value.availableText}</div>
-            </div>
-            <div class="project-inner-left" data-aos="fade-left" data-aos-easing="ease-in">
-                <img src="images/test.jpeg">
-            </div>
+        <div class="project-inner-right right-${index}" data-aos="fade-left" data-aos-easing="ease-in">
+            <div class = "project-inner-right-name">${value.name}</div>
+            <div class = "project-inner-right-tags">${htmlForTag}</div>
+            <div class = "project-inner-right-description">${value.description}</div>
+            <div class = "project-inner-right-availableText">${value.availableText}</div>
         </div>
-    `;
-    alternate = !alternate;
-    }
+    </div>
+`;  
 });
 document.querySelector(".projects-container").innerHTML = htmlForProject;

@@ -170,6 +170,14 @@ body{
     color:#a3ccce;
 }
 
+.project-inner-left.left-1{
+    order:1;
+}
+
+.project-inner-right.right-1{
+    order:0;
+}
+
 @media only screen and (max-width: 1300px){
     .projects-container{
         padding-bottom: 20vh;
@@ -195,6 +203,14 @@ body{
         gap:16px;
         width:100vw;
         padding-top:30px;
+    }
+    
+    .project-inner-left.left-1{
+        order:0;
+    }
+
+    .project-inner-right.right-1{
+        order:1;
     }
 }
 
