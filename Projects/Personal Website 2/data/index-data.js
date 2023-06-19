@@ -23,6 +23,20 @@ const highlightProjects = [
         tags: ["JSON","HTML"],
         image: "../images/test.jpeg",
         availableText: "VIEW PROJECT➞"
+    },
+    {
+        name: "project1",
+        description: "this is project1",
+        tags: ["JSON","HTML"],
+        image: "../images/test.jpeg",
+        availableText: "VIEW PROJECT➞"
+    },
+    {
+        name: "project1",
+        description: "this is project1",
+        tags: ["JSON","HTML"],
+        image: "../images/test.jpeg",
+        availableText: "VIEW PROJECT➞"
     }
 ];
 

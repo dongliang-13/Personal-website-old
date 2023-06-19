@@ -41,13 +41,25 @@ highlightProjects.forEach( (value,index) => {
     value.tags.forEach( (value) => {
         htmlForTag += `<span class = "projectEachTag">${value}</span>`;
     });
-    //if(alternate || window.innerWidth <= 768)
+    let indexs,left,right;
+    if(index%2==1)
+    {
+        indexs=1;
+        left="fade-left";
+        right="fade-right";
+    }
+    else
+    {
+        indexs=0;
+        left="fade-right";
+        right="fade-left";
+    }
     htmlForProject += `
     <div class = "project-inner-container">
-        <div class="project-inner-left left-${index}" data-aos="fade-right" data-aos-easing="ease-in">
+        <div class="project-inner-left left-${indexs}" data-aos="${left}" data-aos-easing="ease-in">
             <img src="images/test.jpeg">
         </div>
-        <div class="project-inner-right right-${index}" data-aos="fade-left" data-aos-easing="ease-in">
+        <div class="project-inner-right right-${indexs}" data-aos="${right}" data-aos-easing="ease-in">
             <div class = "project-inner-right-name">${value.name}</div>
             <div class = "project-inner-right-tags">${htmlForTag}</div>
             <div class = "project-inner-right-description">${value.description}</div>
