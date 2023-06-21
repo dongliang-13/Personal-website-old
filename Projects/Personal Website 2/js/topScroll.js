@@ -58,3 +58,13 @@ function lightModeTopScroll(){
 function darkModeTopScroll(){
     topScroll.style.setProperty("--topScrollColor", "white");
 }
+
+window.addEventListener("load", () => {
+    console.log(window.getComputedStyle(document.body).color);
+    if(window.getComputedStyle(document.body).color == "rgb(0, 0, 0)"){
+        lightModeTopScroll();
+    }
+    else{
+        darkModeTopScroll();
+    }
+});
