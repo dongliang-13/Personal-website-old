@@ -10,7 +10,8 @@ document.querySelector("#header").innerHTML = `
     <ul id="tab-container">
         <li id = "home" class = "tab"><a href="index.html">Home</a></li>
         <li id = "about" class = "tab"><a href="about.html">About</a></li>
-        <li id = "resume" class = "tab"><a href="feedback.html">Feedback</a></li>
+        <li id = "contact" class = "tab"><a href="contact.html">Contact</a></li>
+        <li id = "feedback" class = "tab"><a href="feedback.html">Feedback</a></li>
     </ul>`;
 
 feather.replace();  
@@ -66,7 +67,8 @@ function tab(tabNumber){
     let tab = [];
     tab.push(document.querySelector("#home"));
     tab.push(document.querySelector("#about"));
-    tab.push(document.querySelector("#resume"));
+    tab.push(document.querySelector("#contact"));
+    tab.push(document.querySelector("#feedback"));
     tab.forEach( (value,index) => {
         if(tabNumber==index)
         {

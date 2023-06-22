@@ -1,4 +1,4 @@
-let page = 3;
+let page = 2;
 
 function lightMode(){
     document.body.style.backgroundColor = "white";
