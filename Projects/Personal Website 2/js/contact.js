@@ -24,7 +24,7 @@ function darkMode(){
     darkModeTopScroll();
 }
 
-const scriptURL = 'https://script.google.com/macros/s/AKfycbzcSKEBgE6YKNuEophwTSDxGPbvNn_CKdz_OVinTuUXPNtwpbZ1XSGH3Ve_CQfDrlFi/exec';
+const scriptURL = 'https://script.google.com/macros/s/AKfycbzlLWXLQA5Xlf1iTf-4oSw22mXYLOfy7iXqvUTysgmcJ1gKscsL-zPonvrVSvW7qKyA/exec';
 const form = document.forms['submit-to-google-sheet'];
 const submitMsg = document.querySelector("#msg");
 
@@ -40,3 +40,20 @@ fetch(scriptURL, { method: 'POST', body: new FormData(form)})
     })
     .catch(error => console.error('Error!', error.message))
 });
+
+function submitClicked(){
+    var nameInput = document.forms["submit-to-google-sheet"]["Name"];
+    var emailInput = document.forms["submit-to-google-sheet"]["Email"];
+    var messageInput = document.forms["submit-to-google-sheet"]["Message"];
+
+    if(nameInput==='' || messageInput==='')
+    {
+        return;
+    }
+    var emailFormat = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailFormat.test(emailInput.value)) {
+        return;
+    }
+    submitMsg.innerHTML = `<i class="fa-solid fa-spinner fa-spin-pulse" style="font-size:50px"></i>`;
+    console.log("clicked");
+}

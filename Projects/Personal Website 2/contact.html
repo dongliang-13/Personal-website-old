@@ -15,7 +15,6 @@
         <link href="https://fonts.googleapis.com/css2?family=Inter&family=Montagu+Slab:opsz,wght@16..144,300&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Allerta&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Arimo&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
         <!--/External CSS link-->
 
         <!--Meta tags-->
@@ -39,10 +38,10 @@
                         <form name = "submit-to-google-sheet">
                             <input type = "text" name = "Name" placeholder="Your Name" required>
                             <input type = "email" name = "Email" placeholder="Your Email" required>
-                            <textarea name = "Message" rows = "6" placeholder="Message"></textarea>
-                            <button type = "submit">Submit</button>
+                            <textarea name = "Message" rows = "6" placeholder="Message" required></textarea>
+                            <button  onclick = "submitClicked()" type = "submit">Submit</button>
                         </form>
-                        <span id="msg">Message Sent Successfully</span>
+                        <span id="msg"></span>
                     </div>
                 </div>
             </div>
@@ -63,12 +62,5 @@
         <script src="js/header.js"></script>
         <script src="data/footer-data.js"></script>
         <!--/JS links-->
-
-        <!--aos.js-->
-        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-        <script>
-          AOS.init();
-        </script>
-        <!--/aos.js-->
     </body>
 </html>
