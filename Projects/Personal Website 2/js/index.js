@@ -36,10 +36,10 @@ scrolling.innerHTML = htmlForScroll;
 scrollingContainer.innerHTML += scrollingContainer.innerHTML;
 
 let htmlForProject = "";
-highlightProjects.forEach( (value,index) => {
+highlightProjects.forEach( (valueProject,index) => {
     let htmlForTag="";
-    value.tags.forEach( (value) => {
-        htmlForTag += `<span class = "projectEachTag">${value}</span>`;
+    valueProject.tags.forEach( (value) => {
+        htmlForTag += `<span class = "projectEachTag" style="background-color:${valueProject.color}">${value}</span>`;
     });
     let indexs,left,right;
     if(index%2==1)
@@ -57,15 +57,22 @@ highlightProjects.forEach( (value,index) => {
     htmlForProject += `
     <div class = "project-inner-container">
         <div class="project-inner-left left-${indexs}" data-aos="${left}" data-aos-easing="ease-in">
-            <img src="images/test.jpeg">
+            <img src="${valueProject.image}">
         </div>
         <div class="project-inner-right right-${indexs}" data-aos="${right}" data-aos-easing="ease-in">
-            <div class = "project-inner-right-name">${value.name}</div>
-            <div class = "project-inner-right-tags">${htmlForTag}</div>
-            <div class = "project-inner-right-description">${value.description}</div>
-            <div class = "project-inner-right-availableText">${value.availableText}</div>
+            <div class = "project-inner-right-name">${valueProject.name}</div>
+            <div class = "project-inner-right-tags" id = "inner-right-tags-${index}">${htmlForTag}</div>
+            <div class = "project-inner-right-description">${valueProject.description}</div>
+            <div class = "project-inner-right-availableText"><a href="${valueProject.link}"
+            target="_blank" onmouseover = "this.style.color = '${valueProject.color}';" onmouseout = "this.style.color = '#686868';">${valueProject.availableText}</a>
+            </div>
         </div>
     </div>
-`;  
+`;
 });
 document.querySelector(".projects-container").innerHTML = htmlForProject;
+
+highlightProjects.forEach( (valueProject,index) => {
+    if(valueProject.textColor !== "n/a")
+    document.getElementById(`inner-right-tags-${index}`).style.color = valueProject.textColor;
+});

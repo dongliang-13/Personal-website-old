@@ -1,6 +1,6 @@
 window.onload = () => {
     const transitionDiv = document.querySelector(".transition");
-    const anchor = document.querySelectorAll("a");
+    const anchor = document.querySelectorAll(".headerLink");
     setTimeout( () => {
         transitionDiv.classList.remove('is-active');
     }, 500);

@@ -8,10 +8,10 @@ document.querySelector("#header").innerHTML = `
         </div>
     </div>
     <ul id="tab-container">
-        <li id = "home" class = "tab"><a href="index.html">Home</a></li>
-        <li id = "about" class = "tab"><a href="about.html">About</a></li>
-        <li id = "contact" class = "tab"><a href="contact.html">Contact</a></li>
-        <li id = "feedback" class = "tab"><a href="feedback.html">Feedback</a></li>
+        <li id = "home" class = "tab"><a class = "headerLink" href="index.html">Home</a></li>
+        <li id = "about" class = "tab"><a class = "headerLink" href="about.html">About</a></li>
+        <li id = "contact" class = "tab"><a class = "headerLink" href="contact.html">Contact</a></li>
+        <li id = "feedback" class = "tab"><a class = "headerLink" href="feedback.html">Feedback</a></li>
     </ul>`;
 
 feather.replace();  

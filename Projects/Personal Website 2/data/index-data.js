@@ -11,32 +11,45 @@ const iconForScroll = [
 
 const highlightProjects = [
     {
-        name: "project1",
-        description: "A strong project description provides a roadmap for stakeholders and communicates the vision without getting bogged down in details. We’ve compiled expert tips and sample project descriptions to help you get started. ",
-        tags: ["JSON","HTML","BIGTEXT","BIGTEXT","BIGTEXT","BIGTEXT","BIGTEXT","BIGTEXT","BIGTEXT"],
-        image: "../images/test.jpeg",
-        availableText: "VIEW PROJECT➞"
+        name: "Amazon Replica",
+        description: `
+            This project is a meticulously crafted homage to the iconic Amazon.com.
+            This is still ongoing, however, the project is viewable though nonfunctional.
+        `,
+        tags: ["HTML","CSS","Javascript","JSON","MVC Format","Responsive"],
+        image: "../images/amazon.png",
+        availableText: "ONGOING➞",
+        link:"https://sayiongod.github.io/Amazon/amazon.html",
+        color: "orange",
+        textColor:"n/a"
     },
     {
-        name: "project1",
-        description: "this is project1",
-        tags: ["JSON","HTML"],
-        image: "../images/test.jpeg",
-        availableText: "VIEW PROJECT➞"
+        name: "Personal Website (Old)",
+        description: `
+            Published on Jan, 2023. This project was a prequel to this website and is a personal portfolio 
+            showcasing my professional journey, skills, and accomplishments (Not updated).
+        `,
+        tags: ["HTML","CSS","Javascript"],
+        image: "../images/old-website.png",
+        availableText: "VIEW PROJECT➞",
+        link:"https://sayiongod.github.io/Personal-website-old/",
+        color: "#68A7CF",
+        textColor:"n/a"
     },
     {
-        name: "project1",
-        description: "this is project1",
-        tags: ["JSON","HTML"],
-        image: "../images/test.jpeg",
-        availableText: "VIEW PROJECT➞"
-    },
-    {
-        name: "project1",
-        description: "this is project1",
-        tags: ["JSON","HTML"],
-        image: "../images/test.jpeg",
-        availableText: "VIEW PROJECT➞"
+        name: "Black Jack Prodigy",
+        description: `
+            Published on Jan, 2022. Black Jack Prodigy is a simulation game that tests 
+            player's skills in making strategic decisions and probability while playing Black 
+            Jack in Resort World casino in Queens. The expected 
+            outcome is an engaging and entertaining Black Jack game that improves player's skills in Black Jack.
+        `,
+        tags: ["HTML","Javascript","CSS"],
+        image: "../images/bj.png",
+        availableText: "VIEW PROJECT➞",
+        link:"https://project-6.dongliang.repl.co/",
+        color: "#EFEFEF",
+        textColor:"black"
     }
 ];
 

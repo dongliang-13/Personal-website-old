@@ -100,7 +100,7 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding-bottom: 30vh;
+    padding-bottom: 20vh;
     padding-top:10vh;
 }
 
@@ -150,7 +150,6 @@ body{
 }
 
 .projectEachTag{
-    background-color: blue;
     padding: 5px 15px 5px 15px;
     border-radius: 5px;
 }
@@ -167,7 +166,6 @@ body{
 
 .project-inner-right-availableText:hover{
     transform: translateX(0.5vw);
-    color:#a3ccce;
 }
 
 .project-inner-left.left-1{
@@ -176,6 +174,11 @@ body{
 
 .project-inner-right.right-1{
     order:0;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
 }
 
 @media only screen and (max-width: 1300px){

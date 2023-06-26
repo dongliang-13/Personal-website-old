@@ -24,7 +24,7 @@ footerIcon.forEach( (value) => {
 let footerHTML = `
     <div class="footer-bottom">
         <div class="footer-bottom-left">
-            © 2023 | Coded and designed by Dong Liang
+            © 2023 | Coded by myself & Designed by Cher
         </div>
         <div class="footer-bottom-right">
             ${iconHTML}
