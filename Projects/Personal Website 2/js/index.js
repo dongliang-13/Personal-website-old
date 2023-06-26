@@ -64,7 +64,9 @@ highlightProjects.forEach( (valueProject,index) => {
             <div class = "project-inner-right-tags" id = "inner-right-tags-${index}">${htmlForTag}</div>
             <div class = "project-inner-right-description">${valueProject.description}</div>
             <div class = "project-inner-right-availableText"><a href="${valueProject.link}"
-            target="_blank" onmouseover = "this.style.color = '${valueProject.color}';" onmouseout = "this.style.color = '#686868';">${valueProject.availableText}</a>
+                target="_blank" onmouseover = "this.style.color = '${valueProject.color}';" 
+                onmouseout = "this.style.color = '#686868';">
+            ${valueProject.availableText}</a>
             </div>
         </div>
     </div>
