@@ -81,6 +81,11 @@ button[type="submit"]{
     margin-top:20px;
 }
 
+.phoneNumber{
+    text-decoration: none;
+    color:inherit;
+}
+
 @media only screen and (max-width:1200px){
     .contact-left h1{
         font-size: 3em;
