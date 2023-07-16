@@ -116,17 +116,3 @@ ul{
         font-size: 20px;
     }
 }
-
-@media only screen and (max-width: 426px){
-    #menu-icon svg{
-        zoom:70%;
-    }
-
-    #light-tone-container{
-        zoom:70%;
-    }
-
-    #tab-container{
-        zoom:70%;
-    }
-}

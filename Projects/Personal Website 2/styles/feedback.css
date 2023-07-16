@@ -3,6 +3,7 @@
 }
 
 body{
+    max-width: 100%;
     overflow-x: hidden;
 }
 
@@ -45,6 +46,26 @@ iframe{
     height:80vh;
 }
 
+#patch{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-family: 'Inter', sans-serif; 
+    margin:10vh 20vw;
+}
+
+#patch p{
+    margin:0;
+}
+
+#patch ul{
+    margin:0;
+}
+
+#patch h1{
+    margin:0;
+}
+
 @media only screen and (max-width: 950px){
     .helper{
         width:80vw;
@@ -58,6 +79,12 @@ iframe{
     }
     .icons{
         font-size:40px;
+    }
+}
+
+@media only screen and (max-width: 769px){
+    #patch{
+        margin: 10vh 10vw;
     }
 }
 

@@ -2,7 +2,7 @@
     display:none;
 }
 
-html, body{
+body{
     max-width: 100%;
     overflow-x: hidden;
 }
@@ -38,13 +38,14 @@ html, body{
 .top-left button{
     border-radius:10px;
     background: #155AE0;
-    width:100px;
     height:40px;
     border:none;
-    font-size:1em;
+    font-size:15px;
+    padding: 0 15px;
     color:white;
-    letter-spacing: 1px;
     cursor: pointer;
+    text-align: center;
+    letter-spacing: 1px;
 }
 
 .top-left button:hover{
@@ -53,8 +54,10 @@ html, body{
 }
 
 .top-right{
+    aspect-ratio: 1/1;
     display: flex;
     position: relative;
+    overflow: hidden;
 }
 
 .top-right::after {
@@ -70,8 +73,11 @@ html, body{
 
 .top-right img{
     z-index:3;
-    max-height: 100%;
-    padding-left:20px;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    justify-content: end;
 }
 
 .top-right-last{
@@ -80,7 +86,7 @@ html, body{
 }
 
 .about-section-2{
-    margin-top:10vh;
+    margin-top:10vw;
     display:flex;
     flex-direction: row;
     font-family: 'Inter', sans-serif;
@@ -190,109 +196,6 @@ html, body{
     font-size:0.8em;
 }
 
-.extra-info{
-    font-family: 'Inter', sans-serif; 
-    margin-top: 10vh;
-    padding:0 10vw;
-    display:flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-.extra-info ul{
-    padding:0;
-}
-
-.extra-info h1{
-    font-weight: bold;
-    font-size: 3em;
-    position: relative;
-}
-
-.extra-info h1::before{
-    position: absolute;
-    background-color: blue;
-    left: 80px;
-    bottom:-10px;
-    height:10px;
-    width:120px;
-    content:"";
-}
-
-.extra-info li{
-    list-style-type: circle;
-    font-size:18px;
-    line-height: 2;
-}
-
-.extra-info .extra-info-right{
-    width: 600px;
-    height: 246px;
-    border: solid 2pt black;
-}
-
-.extra-info-right{
-    position: relative;
-    overflow:hidden;
-}
-
-.extra-info-right i{
-    font-size:5em;
-}
-
-.fa-basketball{
-    position:absolute;
-    animation: dribble 3s linear infinite;
-    bottom:200px;
-    left:-5em;
-}
-
-.fa-heart-pulse{
-    position:absolute;
-    right:0;
-}
-
-@keyframes dribble{
-    16%,48%,78%{
-        bottom:0px;
-        animation-timing-function: ease-out;
-    }
-    32%{
-        bottom:150px;
-        animation-timing-function: ease-in;
-    }
-    62%{
-        bottom:80px;
-        animation-timing-function: ease-in;
-    }
-    90%{
-        bottom:30px;
-        animation-timing-function: ease-in;
-    }
-    100%{
-        bottom:0;
-        animation-timing-function: ease-out;
-        transform: rotate(550deg);  
-        left:100%;
-    }
-}
-
-@media only screen and (max-width:1300px){
-    .extra-info{
-        font-family: 'Inter', sans-serif; 
-        margin-top: 10vh;
-        padding:0 10vw;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-
-    .extra-info-right{
-        display: flex;
-        align-self: center;
-        max-width:80vw;
-    }
-}
-
 @media only screen and (max-width:1025px){
     .about-top-tag{
         font-size: 1.2em;
@@ -318,14 +221,6 @@ html, body{
         font-weight:400;
         font-size:1.2em;
         line-height: 1.3;
-    }
-
-    .extra-info-right{
-        zoom: 90%;
-    }
-
-    .extra-info-right i{
-        font-size:4.5em;
     }
 
     .about-top-tag{
@@ -361,12 +256,16 @@ html, body{
 @media only screen and (max-width: 768px){
     .about-section-1{
         padding-top:5vh;
-        height:250px;
+        height:auto;
+    }
+
+    .top-left{
+        width:40vw;
     }
 
     .top-left h1{
-        margin-bottom:20px;
-        font-size:2.5em;
+        margin-bottom:5px;
+        font-size:40px;
     }
 
     .top-left p{
@@ -376,7 +275,6 @@ html, body{
 
     .top-left button{
         border-radius:8.3px;
-        width:83px;
         height:33px;
         font-size:0.83em;
         letter-spacing: 1px;
@@ -392,6 +290,10 @@ html, body{
         text-align: center;
         padding:0;
         width:50vw;
+    }
+
+    .left-2 img{
+        width:110%;
     }
 
     .right-2{
@@ -417,109 +319,56 @@ html, body{
     .right-2 p:last-of-type{
         padding-bottom:10vh;
     }
-
-    .extra-info-left h1{
-        font-size:2.5em;
-    }
-
-    .extra-info-left h1::before{
-        left: 60px;
-        width:100px;
-    }
-
-    .extra-info-left li{
-        font-size:15px;
-    }
-
-    .extra-info-right{
-        zoom:80%;
-    }
-
-    .extra-info-right i{
-        font-size:4em;
-    }
-
-    .extra-info-right{
-        max-width:100vw;
-    }
-
-    .extra-info{
-        margin-top:0px;
-    }
 }
 
 @media only screen and (max-width: 631px){
-    .about-section-1{
-        height:200px;
-    }
-
     .top-left{
         padding-right:0;
-        width: 40vw;
-    }
-
-    .top-left h1{
-        margin-bottom:15px;
-        font-size:2.2em;
+        width: 50vw;
     }
 
     .top-left p{
-        font-size:0.8em;
+        font-size:1em;
         line-height: 1.2;
     }
-
-    .top-right img{
-        max-height: 100%;
-        padding-left:20px;
-    }
-
+    
     .right-2 h1{
-        font-size:2em;
+        font-size:40px;
+        margin:15px 0;
     }
 
     .right-2 p{
-        font-size: 12px;
+        font-size: 14px;
     }
 
-    .extra-info-left h1{
-        font-size:2em;
-    }
-
-    .extra-info-left h1::before{
-        left: 50px;
+    .right-2 h1:before{
         width:80px;
+        height:7px;
+        left:15px;
+        bottom:-7px;
+    }
+}
+
+@media only screen and (max-width:530px){
+    #about-tab ul.about-top-tags{
+        width:85vw;
     }
 
-    .extra-info-left li{
-        font-size:12px;
-    }
-
-    .extra-info-right{
-        zoom:70%;
-    }
-
-    .extra-info-right i{
-        font-size:3.5em;
-    }
-
-    .about-top-tag{
-        font-size: 1em;
-    }
-
-    .about-tab-text ul{
-        padding-left:20px;
-    }
-
-    .about-tab-text span{
-        font-size:0.7em;
-    }
-
-    .about-tab-text ul li{
-        font-size:0.8em;
+    #about-tab div{
+        width:85vw;
     }
 }
 
 @media only screen and (max-width: 426px){
+    .about-section-1{
+        height:auto;
+    }
+
+    .top-left{
+        flex-grow:1;    
+        padding-left: 8vw;
+    }
+
     .top-left h1{
         font-size:2em;
         margin-bottom:10px;
@@ -530,37 +379,38 @@ html, body{
     }
 
     .top-left button{
-        border-radius:8.3px;
-        width:60px;
-        height:25px;
-        font-size:0.65em;
-        letter-spacing: 0.8px;
+        zoom:80%;
     }
 
-    .extra-info-right{
-        max-width:100vw;
+    .top-right-last{
+        display:none;
     }
 
     #about-tab{
+        margin-top:20px;
         margin-bottom: 0;
-    }
-
-    #about-tab div {
-        height: 150px;
     }
 }
 
 @media only screen and (max-width:376px){
+    .about-section-1{
+        height: 200px;
+    }
+
     .about-top-tag {
-        font-size:0.8em;
+        font-size:1em;
+    }
+
+    .top-left h1{
+        font-size:1.9em;
     }
 
     .about-tab-text span{
-        font-size:0.7em;
+        font-size:0.8em;
     }
 
     .about-tab-text ul li{
-        font-size:0.7em;
+        font-size:0.8em;
     }
 
     .about-tab-text ul {
@@ -568,21 +418,14 @@ html, body{
     }
 
     #about-tab div {
-        height: 130px;
+        height: 180px;
     }
 }
 
 @media only screen and (max-width: 360px){
     .about-section-1{
-        height:150px;
-        flex-direction: row;
-        justify-content: space-between;
+        height:180px;
     }
-
-    .top-left{
-        flex-grow:1;    
-    }
-
     .top-left h1{
         font-size:1.8em;
         margin-bottom:5px;
@@ -593,53 +436,11 @@ html, body{
     }
 
     .top-left button{
-        border-radius:7px;
-        width:50px;
-        height:20px;
-        font-size:0.5em;
-    }
-
-    .top-right-last{
-        display: none;
-    }
-
-    .right-2 h1{
-        font-size:1.8em;
-        margin:15px 0;
-    }
-
-    .right-2 p{
-        font-size: 10px;
-    }
-
-    .right-2 h1:before{
-        width:60px;
-        height:7px;
-        left:10px;
-        bottom:-7px;
+        zoom:60%;
     }
 
     .right-2 p:last-of-type{
         padding-bottom:5vw;
         margin-bottom:0;
-    }
-
-    .extra-info-left h1{
-        font-size:1.8em;
-    }
-
-    .extra-info-left h1::before{
-        left: 40px;
-        bottom:-7px;
-        height:7px;
-        width:70px;
-    }
-
-    .extra-info-left li{
-        font-size:10px;
-    }
-
-    .extra-info-right i{
-        font-size:3em;
     }
 }

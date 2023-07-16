@@ -3,6 +3,7 @@
 }
 
 body{
+    max-width: 100%;
     overflow-x: hidden;
 }
 
@@ -104,36 +105,6 @@ button[type="submit"]{
     }
 }
 
-@media only screen and (max-width:1025px){
-    form{
-        margin-left: 20px;
-    }
-
-    form input, form textarea{
-        width:90%;
-        padding:12px;
-        margin: 12px 0;
-        font-size:15px;
-        border-radius: 6px;
-    }
-    
-    button[type="submit"]{
-        padding: 14px 60px;
-        font-size: 18px;
-        margin-top: 20px;
-        border-radius: 6px;
-        cursor: pointer;
-        background-color: blue;
-        border:none;
-        letter-spacing: 1px;
-        color:white;
-    }
-
-    #msg{
-        margin-left: 20px;
-    }
-}
-
 @media only screen and (max-width:900px){
     .row{
         flex-direction: column;
@@ -145,6 +116,10 @@ button[type="submit"]{
 
     #contact div{
         margin-top:20px;
+    }
+
+    .contact-right{
+        width:75vw;
     }
 
     form{
@@ -203,28 +178,7 @@ button[type="submit"]{
         font-size: 15px;
     }
 
-    form input, form textarea{
-        width:100%;
-        padding:12px;
-        margin: 12px 0;
-        font-size:10px;
-        border-radius: 3px;
-    }
-    
-    button[type="submit"]{
-        padding: 7px 20px;
-        font-size: 8px;
-        margin-top: 10px;
-        border-radius: 6px;
-        cursor: pointer;
-        background-color: blue;
-        border:none;
-        letter-spacing: 1px;
-        color:white;
-    }
-
-    #msg{
-        margin-top:10px;
-        font-size:12px;
+    .contact-right{
+        width:70vw;
     }
 }

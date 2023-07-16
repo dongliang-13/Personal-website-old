@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <!--CSS links-->
         <link rel="stylesheet" href="styles/contact.css">
@@ -18,7 +18,8 @@
         <!--/External CSS link-->
 
         <!--Meta tags-->
-        <meta name = "viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!--/Meta tags-->
 
         <!--Extras-->
@@ -36,14 +37,14 @@
                 <div class="row">
                     <div class="contact-left">
                         <h1 class="sub-title">Contact Me</h1>
-                        <p><i class="fa-solid fa-paper-plane fa-beat"></i>Sayiongod@gmail.com</p>
-                        <p class = "phoneNumber"><i class="fa-solid fa-phone-volume fa-beat"></i>(646)925-0296</p>
+                        <p><i class="fa-solid fa-paper-plane fa-beat"></i>dongliang1204@gmail.com</p>
+                        <p class = "phoneNumber"><i class="fa-solid fa-phone-volume fa-beat" contenteditable="true" tel="disable"></i>(646)925-0296</p>
                     </div>
                     <div class="contact-right">
                         <form name = "submit-to-google-sheet">
-                            <input type = "text" name = "Name" placeholder="Your Name" required>
-                            <input type = "email" name = "Email" placeholder="Your Email" required>
-                            <textarea name = "Message" rows = "6" placeholder="Message" required></textarea>
+                            <input type = "text" name = "Name" placeholder="Your Name" autocomplete="off" required>
+                            <input type = "email" name = "Email" placeholder="Your Email" autocomplete="off" required>
+                            <textarea name = "Message" rows = "6" placeholder="Message" style="resize: none;" autocomplete="off" required></textarea>
                             <button  onclick = "submitClicked()" type = "submit">Submit</button>
                         </form>
                         <span id="msg"></span>
@@ -61,7 +62,6 @@
 
         <!--JS links-->
         <script src="js/transition.js"></script>
-        <script src="data/index-data.js"></script>
         <script src="js/topScroll.js"></script>
         <script src="js/contact.js"></script>
         <script src="js/header.js"></script>

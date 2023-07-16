@@ -19,14 +19,14 @@ function scrollNow(){
     if(interval[0]){
         clearInterval(interval[0]);
     }
-    if (window.pageYOffset === 0 && !isMouseOverDiv){
+    if (window.scrollY === 0 && !isMouseOverDiv){
         topScroll.style.setProperty("--topScrollOpacity","0");
         interval[0] = setTimeout(function()
         {
             topScroll.style.setProperty("--topScrollVisibility","hidden");
         } ,"200");
     }
-    else if ((window.innerHeight + window.pageYOffset) >= document.body.offsetHeight && !isMouseOverDiv) {
+    else if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight && !isMouseOverDiv) {
         topScroll.style.setProperty("--topScrollOpacity","1");
         topScroll.style.setProperty("--topScrollVisibility","visible");
     }

@@ -57,16 +57,16 @@ highlightProjects.forEach( (valueProject,index) => {
     htmlForProject += `
     <div class = "project-inner-container">
         <div class="project-inner-left left-${indexs}" data-aos="${left}" data-aos-easing="ease-in">
-            <img src="${valueProject.image}">
+            <img src="${valueProject.image}" alt="project picture" onclick = "window.open('${valueProject.link}','_blank')">
         </div>
         <div class="project-inner-right right-${indexs}" data-aos="${right}" data-aos-easing="ease-in">
             <div class = "project-inner-right-name">${valueProject.name}</div>
             <div class = "project-inner-right-tags" id = "inner-right-tags-${index}">${htmlForTag}</div>
             <div class = "project-inner-right-description">${valueProject.description}</div>
-            <div class = "project-inner-right-availableText"><a href="${valueProject.link}"
-                target="_blank" onmouseover = "this.style.color = '${valueProject.color}';" 
-                onmouseout = "this.style.color = '#686868';">
-            ${valueProject.availableText}</a>
+            <div class = "project-inner-right-availableText"><span onmouseover = "this.style.color = '${valueProject.color}';" 
+            onmouseout = "this.style.color = '#686868';"><a href="${valueProject.link}"
+                target="_blank">
+            ${valueProject.availableText}</a></span>
             </div>
         </div>
     </div>

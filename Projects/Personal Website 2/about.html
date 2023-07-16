@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <!--CSS links-->
         <link rel="stylesheet" href="styles/about.css">
@@ -15,11 +15,11 @@
         <link href="https://fonts.googleapis.com/css2?family=Inter&family=Montagu+Slab:opsz,wght@16..144,300&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Allerta&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Arimo&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
         <!--/External CSS link-->
 
         <!--Meta tags-->
-        <meta name = "viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!--/Meta tags-->
 
         <!--Extras-->
@@ -36,22 +36,22 @@
             <div class="top-left">
                 <h1>I'm Dong!</h1>
                 <p>Got questions or need a chat? Shoot me
-                    an email at sayiongod@gmail.com or 
-                    go to the Contact page!
+                    an email found in the footer or 
+                    go to the contact page!
                 </p>
                 <button onclick="window.open('https://docs.google.com/document/d/1U3fDaSnu97W8wlQZRGcVs0k6elWDNLbLMGOWq7oQ0Y0/edit?usp=sharing', '_blank')">Resume</button>
             </div>
             <div class="top-right">
-                <img src="images\about-pfp.png">
+                <img src="images\about-pfp.png" alt="profile picture">
             </div>
             <div class="top-right-last"></div>
         </div>
 
         <div class="about-section-2">
             <div class = "left-2">
-                <img src="images\about-pfp-2.png" data-aos="fade-up" data-aos-easing="ease-in">
+                <img src="images\about-pfp-2.png" alt="picture of myself">
             </div>
-            <div class = "right-2" data-aos="fade-up" data-aos-easing="ease-in">
+            <div class = "right-2">
                 <h1>About Me</h1>
                 <p>
                     I'm currently an undergrad from Stony Brook University Class of 
@@ -75,24 +75,7 @@
             </div>
         </div>
 
-        <div class="extra-info">
-            <div class="extra-info-left" data-aos="fade-up" data-aos-easing="ease-in">
-                <h1>Fun Facts</h1>
-                <p>
-                    <ul>
-                        <li>I'm left handed (10% of the population)</li>
-                        <li>I'm CPR Certified on June 21, 2023</li>
-                        <li>Pet Peeve: Sound of nails scraping chalkboard</li>
-                    </ul>
-                </p>
-            </div>
-            <div class="extra-info-right" data-aos="fade-up" data-aos-easing="ease-in">
-                <i class="fa-solid fa-basketball" style = "color:#F88158"></i>
-                <i class="fa-solid fa-heart-pulse" style = "color:red"></i>
-            </div>
-        </div>
-
-        <nav id = "about-tab" data-aos="fade-up" data-aos-easing="ease-in">
+        <nav id = "about-tab">
             <ul class="about-top-tags">
                 <li class="about-top-tag active">Experience</li>
                 <li class="about-top-tag active">Education</li>
@@ -129,18 +112,10 @@
 
         <!--JS links-->
         <script src="js/transition.js"></script>
-        <script src="data/index-data.js"></script>
         <script src="js/topScroll.js"></script>
         <script src="js/about.js"></script>
         <script src="js/header.js"></script>
         <script src="data/footer-data.js"></script>
         <!--/JS links-->
-
-        <!--aos.js-->
-        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-        <script>
-          AOS.init();
-        </script>
-        <!--/aos.js-->
     </body>
 </html>
