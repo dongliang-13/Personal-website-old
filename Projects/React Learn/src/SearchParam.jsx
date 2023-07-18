@@ -14,9 +14,8 @@ const SearchParams = () => {
     breed: "",
   });
 
-    const results = useQuery( ["search", requestParams], fetchSearch);
-    const pets = results?.data?.pets??[];
-
+  const results = useQuery(["search", requestParams], fetchSearch);
+  const pets = results?.data?.pets ?? [];
 
   return (
     <div className="search-params">
@@ -34,11 +33,7 @@ const SearchParams = () => {
       >
         <label htmlFor="location">
           Location
-          <input
-            name="location"
-            id="location"
-            placeholder="Location"
-          />
+          <input name="location" id="location" placeholder="Location" />
         </label>
         <label htmlFor="animal">
           Animal
@@ -57,11 +52,7 @@ const SearchParams = () => {
         </label>
         <label htmlFor="breed">
           Breed
-          <select
-            id="breed"
-            disabled={animal.length === 0}
-            name="breed"
-          >
+          <select id="breed" disabled={animal.length === 0} name="breed">
             <option />
             {breeds.map((breed) => (
               <option key={breed}>{breed}</option>
