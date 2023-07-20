@@ -3,6 +3,9 @@ import fetchSearch from "./fetchSearch";
 import useBreedList from "./useBreedList";
 import Results from "./Results";
 import { useState } from "react";
+import { useContext } from "react";
+import AdoptedPetContext from "./AdoptedPetContext";
+
 const ANIMALS = ["bird", "cat", "dog", "rabbit", "reptile"];
 
 const SearchParams = () => {
@@ -16,6 +19,7 @@ const SearchParams = () => {
 
   const results = useQuery(["search", requestParams], fetchSearch);
   const pets = results?.data?.pets ?? [];
+  const [adoptedPet] = useContext(AdoptedPetContext);
 
   return (
     <div className="search-params">
@@ -31,6 +35,13 @@ const SearchParams = () => {
           setRequestParams(obj);
         }}
       >
+        {
+          adoptedPet?(
+            <div className="pet image-container">
+              <img src={adoptedPet.images[0]} alt={adoptedPet.name} />
+            </div>
+          ) : null
+        }
         <label htmlFor="location">
           Location
           <input name="location" id="location" placeholder="Location" />

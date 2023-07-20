@@ -5,11 +5,17 @@ import fetchPet from "./fetchPet";
 import Carousel from "./Carousel";
 import ErrorBoundary from "./ErrorBoundary";
 import Modal from "./Modal";
+import { useContext } from "react";
+import AdoptedPetContext from "./AdoptedPetContext";
+import { useNavigate } from "react-router-dom";
 
 const Details = () => {
   const [showModal, setShowModal] = useState(false);
   const { id } = useParams();
   const results = useQuery(["details", id], fetchPet);
+  const navigate = useNavigate();
+  // eslint-disable-next-line no-unused-vars
+  const [ _ , setAdoptedPet ] = useContext(AdoptedPetContext);
 
   if (results.isLoading) {
     return (
@@ -38,7 +44,10 @@ const Details = () => {
                   Would you like to adopt {pet.name}?
                 </h1>
                 <div className = "buttons">
-                  <button>Yes</button>
+                  <button onClick = {()=> {
+                    setAdoptedPet(pet);
+                    navigate("/");
+                  }}>Yes</button>
                   <button onClick = {()=>setShowModal(false)}>No</button>
                 </div>
               </div>
